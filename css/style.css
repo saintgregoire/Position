@@ -1,0 +1,144 @@
+@import url('reset.css');
+
+/* *Общие */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+
+.fw-bold {
+  font-weight: 900;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* *Header */
+
+.header {
+  background: #4d4d4d;
+  min-height: 80px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  min-height: inherit;
+}
+
+
+h1 {
+  position: relative;
+  left: -52px;
+  font-size: 30px;
+  color: whitesmoke;
+  margin: 0 auto;
+}
+
+/**CARDS */
+
+.title-cards {
+  text-transform: uppercase;
+  font-size: 25px;
+  color: whitesmoke;
+  text-align: center;
+  margin: 25px auto;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4d4d4d;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.card {
+  flex: 0 1 50%;
+  padding: 5px;
+  height: 300px;
+  position: relative;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hover {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -75px;
+  height: 150px;
+  background: rgba(77, 77, 77, .9);
+  font-size: 20px;
+  color: azure;
+  line-height: 1.5;
+  padding: 0 5px;
+  display: none;
+}
+
+.card:hover .hover {
+  display: block;
+}
+
+/* *FOOTER */
+
+.footer {
+  min-height: 80px;
+  color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4d4d4d;
+}
+
+/* *FIX */
+
+.fix {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  min-height: 300px;
+  top: 0;
+  left: 0;
+  margin-top: calc(50vh - 150px);
+  margin-right: calc(50vw + 630px);
+  background: #4d4d4d;
+  padding: 5px;
+  max-width: 200px;
+}
+
+.fix > a {
+  padding: 5px;
+  background: rgba(77, 77, 77, 0.9);
+  text-decoration: none;
+  color: azure;
+  border: 1px solid black;
+}
+
+.fix > a:hover {
+  background: rgba(0, 0, 0, .2)
+}
+
+.fix > a:active {
+  color: rgba(157, 153, 149);
+}
